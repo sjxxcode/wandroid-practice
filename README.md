@@ -1,4 +1,4 @@
-# koin-practice
+# wanandroid-practice
 
 Kotlin Multiplatform starter with a shared module and an Android app.
 

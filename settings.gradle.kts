@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "koin-practice"
+rootProject.name = "wanandroid-practice"
 include(":shared", ":androidApp")

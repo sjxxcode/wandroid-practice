@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.koinpractice.android"
+    namespace = "com.example.wanandroidpractice.android"
     compileSdk = 34
 
     buildFeatures {
@@ -16,7 +16,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.koinpractice.android"
+        applicationId = "com.example.wanandroidpractice.android"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

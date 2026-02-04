@@ -1,4 +1,4 @@
-package com.example.koinpractice
+package com.example.wanandroidpractice
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

@@ -1,4 +1,4 @@
-package com.example.koinpractice.android
+package com.example.wanandroidpractice.android
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.example.koinpractice.Greeting
+import com.example.wanandroidpractice.Greeting
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

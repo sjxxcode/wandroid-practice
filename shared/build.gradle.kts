@@ -29,7 +29,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.koinpractice.shared"
+    namespace = "com.example.wanandroidpractice.shared"
     compileSdk = 34
 
     defaultConfig {
