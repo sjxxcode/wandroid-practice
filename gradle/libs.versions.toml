@@ -18,7 +18,7 @@ kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
 kotlinx-serialization = "1.7.3"
 ktor = "3.3.0"
-koin = "4.1.1"
+koin = "3.5.6"
 kotlinx-datetime = "0.6.1"
 kotlinx-collections-immutable = "0.3.7"
 jetbrains-markdown = "0.7.3"
@@ -70,6 +70,7 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin_startup = { module = "io.insert-koin:koin-androidx-startup", version.ref = "koin" }
 koin_bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }

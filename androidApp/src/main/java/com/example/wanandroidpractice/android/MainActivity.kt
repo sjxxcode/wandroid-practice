@@ -12,15 +12,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.example.wanandroidpractice.Greeting
+import org.koin.androidx.compose.koinViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val greeting = Greeting().greet()
         setContent {
             MaterialTheme {
-                GreetingScreen(greeting = greeting)
+                val viewModel: GreetingViewModel = koinViewModel()
+                GreetingScreen(greeting = viewModel.greetingText)
             }
         }
     }
