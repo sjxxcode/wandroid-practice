@@ -14,4 +14,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "wanandroid-practice"
-include(":shared", ":androidApp")
+include(":shared")
+include(":androidApp")
+include(":framework:net")
