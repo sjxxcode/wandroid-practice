@@ -16,12 +16,9 @@ plugins {
 kotlin {
     // Android 目标：用于生成 Android 侧产物（供 App 或其他模块依赖）。
     androidTarget {
-        // 对 Android target 下的所有 compilation 统一配置 Kotlin 编译参数。
-        compilations.all {
-            kotlinOptions {
-                // 与项目其余模块保持一致，统一使用 Java 17 字节码目标。
-                jvmTarget = "17"
-            }
+        // 与项目其余模块保持一致，统一使用 Java 17 字节码目标。
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
 
@@ -109,7 +106,7 @@ android {
     namespace = "com.example.wanandroidpractice.framework.net"
 
     // 编译 SDK 版本。这里与当前项目现有模块保持一致。
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         // 模块最低支持 Android 版本。

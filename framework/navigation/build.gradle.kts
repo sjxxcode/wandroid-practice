@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 kotlin {
@@ -16,9 +17,11 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.koin.core)
+                implementation(libs.compose.runtime)
+                api("org.jetbrains.androidx.navigation:navigation-compose:2.9.2")
             }
         }
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
@@ -28,8 +31,12 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.wanandroidpractice.shared"
+    namespace = "com.example.wanandroidpractice.framework.navigation"
     compileSdk = 36
+
+    buildFeatures {
+        compose = true
+    }
 
     defaultConfig {
         minSdk = 24

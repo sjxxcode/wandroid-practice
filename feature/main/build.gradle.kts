@@ -1,6 +1,9 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
+    alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -16,9 +19,14 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(libs.koin.core)
+                implementation(project(":shared"))
+                implementation(project(":framework:navigation"))
+                implementation(compose.runtime)
+                implementation(compose.material3)
+                implementation(libs.kotlinx.serialization.json)
             }
         }
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
@@ -28,8 +36,12 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.wanandroidpractice.shared"
+    namespace = "com.example.wanandroidpractice.feature.main"
     compileSdk = 36
+
+    buildFeatures {
+        compose = true
+    }
 
     defaultConfig {
         minSdk = 24
