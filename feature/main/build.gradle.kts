@@ -20,10 +20,17 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":shared"))
-                implementation(project(":framework:navigation"))
-                implementation(compose.runtime)
-                implementation(compose.material3)
+                implementation(libs.compose.runtime)
+                implementation(libs.compose.material3)
                 implementation(libs.kotlinx.serialization.json)
+            }
+        }
+
+        val androidMain by getting {
+            dependencies {
+                implementation(project(":framework:navigation-contract"))
+                implementation(libs.jetbrains.navigation.compose)
+                implementation(libs.koin.core)
             }
         }
 
