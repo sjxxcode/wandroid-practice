@@ -2,12 +2,11 @@ package com.example.wanandroidpractice.framework.navigation.runtime
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.wanandroidpractice.framework.navigation.contract.AppNavigator
-import org.koin.core.context.GlobalContext
+import org.koin.compose.koinInject
 
 /**
  * 应用唯一顶层导航宿主。
@@ -25,10 +24,9 @@ fun AppNavHost(
     modifier: Modifier = Modifier,
 ) {
     val navController = rememberNavController()
-    val koin = remember { GlobalContext.get() }
-    val navigator = remember(koin) { koin.get<AppNavigator>() }
-    val binder = remember(koin) { koin.get<NavControllerBinder>() }
-    val graphRegistry = remember(koin) { koin.get<AppGraphRegistry>() }
+    val navigator = koinInject<AppNavigator>()
+    val binder = koinInject<NavControllerBinder>()
+    val graphRegistry = koinInject<AppGraphRegistry>()
 
     // 保证导航控制器绑定关系与当前 NavHost 生命周期一致。
     DisposableEffect(navController, binder) {

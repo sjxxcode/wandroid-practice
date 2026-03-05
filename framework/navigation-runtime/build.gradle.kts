@@ -23,6 +23,7 @@ kotlin {
                 implementation(libs.compose.runtime)
                 implementation(libs.jetbrains.navigation.compose)
                 implementation(libs.koin.core)
+                implementation(libs.koin.androidx.compose)
             }
         }
     }
